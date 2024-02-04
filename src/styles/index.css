@@ -1,0 +1,46 @@
+@import './base.css';
+
+body {
+  background-color: #DCF2F1;
+  color: #0A1D56;
+}
+
+.page {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+p,
+button 
+a {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+.head-1 {
+  font-size: 42px;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+.paragraph-1 {
+  font-size: 16px;
+}
+
+
+.highlight {
+  color: #6C22A6;
+  font-weight: bold;
+}
