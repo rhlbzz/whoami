@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { GITHUB_PROFILE_LINK, GMAIL_MAIL, LINKEDIN_PROFILE_LINK } from '../../utils/contants.ts'
+import { GITHUB_PROFILE_LINK, GMAIL_MAIL, LINKEDIN_PROFILE_LINK } from '../../utils/constants'
 
 export default defineComponent({
     name: 'TheFooter',
@@ -52,4 +52,4 @@ footer {
     transition: fill 0.3s ease-in-out;
 }
 
-</style>
+</style>../../utils/constants.js
