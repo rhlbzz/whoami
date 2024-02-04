@@ -35,6 +35,7 @@ export default defineComponent({
 
 <style>
 footer {
+    background-color: #DCF2F1;
     bottom: 0;
     padding: 12px 4px;
     border-top: 1px whitesmoke solid;

@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <section class="">
+    <section class="overflow-auto pb-20px">
         <h1 class="head-1 font-code text-center">Hello world! 👋🏼</h1>
         <div class="presentation">
             <p class="paragraph-1">Mi chiamo <span class="highlight">Rachele Bizzarri</span> e sono una <span class="highlight">frontend developer</span>.</p>        
