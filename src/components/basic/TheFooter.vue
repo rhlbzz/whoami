@@ -33,9 +33,9 @@ export default defineComponent({
     </footer>
 </template>
 
-<style>
+<style type="scss" scoped>
 footer {
-    background-color: #DCF2F1;
+    background-color: var(--c-dark);
     bottom: 0;
     padding: 12px 4px;
     border-top: 1px whitesmoke solid;
@@ -43,13 +43,13 @@ footer {
 
 .icon {
     height: 20px;
-    fill: #6C22A6;
+    fill: var(--c-mint);
     transition: fill 0.3s ease-in-out;
+
+    &:hover {
+        fill: var(--c-parakeet);
+        transition: fill 0.3s ease-in-out;
+    }
 }
 
-.icon:hover {
-    fill: #0A1D56;
-    transition: fill 0.3s ease-in-out;
-}
-
-</style>../../utils/constants.js
+</style>

@@ -3,9 +3,6 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'HelloWorld',
-    setup() {
-        return {}
-    }
 
 })
 </script>
@@ -14,16 +11,15 @@ export default defineComponent({
     <section class="overflow-auto pb-20px">
         <h1 class="head-1 font-code text-center">Hello world! 👋🏼</h1>
         <div class="presentation">
-            <p class="paragraph-1">Mi chiamo <span class="highlight">Rachele Bizzarri</span> e sono una <span class="highlight">frontend developer</span>.</p>        
-            <br />
             <p class="paragraph-1">
-                Sono nata il 4 agosto 1994 a Volterra, dove ho frequentato l'Istituto Tecnico Commerciale F. Niccolini.
-                Nel 2013 mi sono trasferita a Pisa per iniziare i miei studi universitari, conseguendo una laurea magistrale in <span class="highlight">Informatica Umanistica</span> nel novembre del 2019.
+                My name is <span class="highlight">Rachele Bizzarri</span> and I am a <span class="highlight">frontend developer</span>.
             </p>       
-            <p class="paragraph-1">Mi piace molto leggere e la mia più grande passione è la musica.</p>
-            <p class="paragraph-1">Sono particolarmente interessata alle potenzialità delle tecniche digitali come strumento di disseminazione culturale, diffusione del patrimonio artistico e democratizzazione del sapere collettivo.</p>
-            <br />
-            <p class="paragraph-1">Attualmente lavoro per MONOGRID.</p>
+            <p class="paragraph-1 mt-3">
+                I was born on August the 4th 1994 in Volterra, where I graduateed in accounting with a curriculim in programming, at Istituto Tecnico Commerciale F. Niccolini. Afterwards, in 2013, I moved to Pisa to start my study at Università di Pisa where I've erned my master's degree in <span class="highlight">Digital Humanities</span> in 2019.
+            </p>       
+            <p class="paragraph-1 mt-1"> I really like to read and my greatest passion is music.</p>
+            <p class="paragraph-1 mt-1">I'm particularly interested in the potential of digital technologies as a powerful inclusive and democratizing tool for dissemination on cultural and artistic heritage.</p>
+            <p class="paragraph-1 mt-5">At the time, I'm working at MONOGRID.</p>
         </div>
         
     </section>

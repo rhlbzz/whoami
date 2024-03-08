@@ -1,8 +1,8 @@
 @import './base.css';
 
 body {
-  background-color: #DCF2F1;
-  color: #0A1D56;
+  background-color: var(--c-dark);
+  color: var(--c-light);
 }
 
 .page {
@@ -32,7 +32,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 
@@ -46,6 +46,18 @@ label {
 
 
 .highlight {
-  color: #6C22A6;
+  color: var(--c-seafoam);
   font-weight: bold;
+}
+
+
+.link {
+  text-decoration: none;
+  color: var(--c-mint);
+  transition: color 0.5s ease-out;
+
+  &:hover {
+    color: var(--c-parakeet);
+    transition: color 0.5s ease-out;
+  }
 }
