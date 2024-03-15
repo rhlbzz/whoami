@@ -1,8 +1,11 @@
-@import './base.css';
+@import './global.scss';
 
 body {
-  background-color: var(--c-dark);
-  color: var(--c-light);
+  background-color: $c-dark;
+  color: $c-light;
+  font-family: 'Titillium Web', sans-serif; 
+  color: $c-light;
+  background: $c-dark;
 }
 
 .page {
@@ -12,13 +15,40 @@ body {
   align-items: center;
 }
 
+.font-default {  
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.font-code {
+  font-family: 'Sono', monospace;
+}
+
+.font-titillium {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.font-pixelify {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.font-spline-sans-mono {
+  font-family: "Spline Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
 p,
 button 
 a {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Spline Sans Mono", monospace;// 'Titillium Web', sans-serif;
 }
 
 h1,
@@ -28,7 +58,7 @@ h3 {
 }
 
 .head-1 {
-  font-size: 42px;
+  font-size: 52px;
 }
 
 p {
@@ -41,23 +71,28 @@ p {
 }
 
 label {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
 .highlight {
-  color: var(--c-seafoam);
+  color: $c-seafoam;
   font-weight: bold;
 }
 
-
+a,
 .link {
   text-decoration: none;
-  color: var(--c-mint);
+  color: $c-mint;
   transition: color 0.5s ease-out;
 
   &:hover {
-    color: var(--c-parakeet);
+    color: $c-parakeet;
     transition: color 0.5s ease-out;
   }
+}
+
+::selection {
+  background-color: $c-mint;
+  color: $c-dark;
 }

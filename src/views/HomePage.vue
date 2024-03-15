@@ -16,9 +16,9 @@ export default defineComponent({
 
 <template>
   <section class="pb-10">
-    <HelloWorld class="sm:mt-40px md:mt-80px"/>
+    <HelloWorld class="sm:mt-10 md:mt-20"/>
     <div v-if="false" class="mt-5">
-      <p>If you wanna take a look at some projects where I've worked on, <RouterLink class="link" :to="{name: 'Projects'}">check it out</RouterLink>!</p>
+      <p>If you wanna take a look at some projects I've worked on, <RouterLink class="link" :to="{name: 'Projects'}">check it out</RouterLink>!</p>
     </div>
   </section>
 </template>
