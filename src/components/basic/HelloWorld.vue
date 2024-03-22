@@ -1,27 +1,34 @@
 <script lang="ts">
+import { GMAIL_MAIL, LINKEDIN_PROFILE_LINK } from '@/utils/constants';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'HelloWorld',
+    setup() {
+        return {
+            GMAIL_MAIL,
+            LINKEDIN_PROFILE_LINK
+        }
+    }
 
 })
 </script>
 
 <template>
-    <section class="overflow-auto pb-20px">
+    <section>
         <h1 class="head-1 text-center">Hello world! 👋🏼</h1>
-        <div class="presentation">
-            <p class="paragraph-1">
-                My name is <span class="highlight">Rachele Bizzarri</span> and I am a <span class="highlight">frontend developer</span>.
-            </p>       
-            <p class="paragraph-1 mt-3">
-                I was born on August the 4th 1994 in Volterra, where I graduated in accounting with a curriculum in programming, at Istituto Tecnico Commerciale F. Niccolini. Afterwards, in 2013, I moved to Pisa to start my study at Università di Pisa where I've earned a master's degree in <span class="highlight">Digital Humanities</span> in 2019.
-            </p>       
-            <p class="paragraph-1 mt-1">I really like to read and my greatest passion is music.</p>
-            <p class="paragraph-1 mt-1">I'm particularly interested in the potential of digital technologies as a powerful inclusive and democratizing tool for dissemination on cultural and artistic heritage.</p>
-            <p class="paragraph-1 mt-5">At the time, I'm working at MONOGRID.</p>
-        </div>
         
+        <div class="presentation">
+            <p class="paragraph-1">My name is <span class="highlight">Rachele Bizzarri</span> and I am a <span class="highlight">front-end developer</span>.</p>
+
+            <p class="paragraph-1 mt-3">I was born on August the 4th 1994 in Volterra, a borgo of etrurian heritage in the middle of Tuscany hills, where some years later I graduated in accounting with a curriculum in programming at Istituto Tecnico Commerciale F. Niccolini. During the summer of 2013, I was wondering how I could mix my favorite subjects - informatics and literature - for building my future, when suddenly I found what I was looking for at Università di Pisa. Thus, in September, I started my studies in <span class="highlight">Digital Humanities</span> and in 2019 I finished my master's degree with a thesis on <i>scrollytelling</i> - a digital interactive interpretation of storytelling - , it’s potential and usage, developing a JavaScript library from scratch with the purpose of helping other digital humanists in the creation of scrollytelling articles or posts.</p>
+
+            <p class="paragraph-1 mt-3">Beside these two work-related passions, I consider myself really picky in my music tastes and I am a demanding reader, and I believe that the same attention is reflected in how I manage my daily work: I am always looking for the perfect detail or the most beautiful solution that could help in reaching the right compromise for deliver not only a functional work but aesthetic.</p>
+
+            <p class="paragraph-1 mt-3">At the moment, I’m working at MONOGIRD, in Florence.</p>
+
+            <p class="paragraph-1 mt-3">And… That’s almost everything 🙃 ! If you wanna get in touch you can write me an  <a :href="'mailto:'+GMAIL_MAIL" rel="noopener" target="_blank">email</a> or we can connect on <a :href="LINKEDIN_PROFILE_LINK"  rel="nofollo noopener noreferrer" target="_blank">LinkedIn</a>.</p>
+        </div>
     </section>
 </template>
 
