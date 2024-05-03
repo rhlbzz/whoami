@@ -1,9 +1,13 @@
 <script lang="ts">
+import CtaCustom from '@/components/base/CtaCustom.vue';
 import { GMAIL_MAIL, LINKEDIN_PROFILE_LINK } from '@/utils/constants';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'HelloWorld',
+    components: {
+        CtaCustom
+    },
     setup() {
         return {
             GMAIL_MAIL,
@@ -16,6 +20,9 @@ export default defineComponent({
 
 <template>
     <section>
+        <CtaCustom split>
+            Ciao hello world
+        </CtaCustom>
         <h1 class="head-1 text-center">Hello world! 👋🏼</h1>
         
         <div class="presentation">
@@ -27,7 +34,18 @@ export default defineComponent({
 
             <p class="paragraph-1 mt-3">At the moment, I’m working at MONOGIRD, in Florence.</p>
 
-            <p class="paragraph-1 mt-3">And… That’s almost everything 🙃 ! If you wanna get in touch you can write me an  <a :href="'mailto:'+GMAIL_MAIL" rel="noopener" target="_blank">email</a> or we can connect on <a :href="LINKEDIN_PROFILE_LINK"  rel="nofollo noopener noreferrer" target="_blank">LinkedIn</a>.</p>
+            <p class="paragraph-1 mt-3">And… That’s almost everything 🙃 ! If you wanna get in touch you can write me an  
+                <CtaCustom
+                    split
+                    :href="'mailto:'+GMAIL_MAIL" 
+                    rel="noopener"
+                    target="_blank"
+                >
+                    <template #default>
+                        e-mail
+                    </template>
+                </CtaCustom>
+            or we can connect on <a :href="LINKEDIN_PROFILE_LINK"  rel="nofollo noopener noreferrer" target="_blank">LinkedIn</a>.</p>
         </div>
     </section>
 </template>

@@ -14,7 +14,11 @@
   },
   "dependencies": {
     "@unocss/preset-uno": "^0.58.4",
+    "@vueuse/core": "^10.9.0",
+    "animejs": "^3.2.2",
     "gsap": "^3.12.5",
+    "splitting": "^1.0.6",
+    "spltjs": "^1.1.0",
     "unocss": "^0.58.4",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"

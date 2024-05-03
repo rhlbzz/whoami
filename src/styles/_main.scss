@@ -1,0 +1,21 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+}
+  
+@function rem($data, $base: $root-font-size) {
+    $value: strip-unit($data);
+    @return $data / $base * 1rem;
+}
+
+@mixin clearfix {
+    // append a pseudo element after element whitch will then clear the float
+    &::after {
+        content: "";
+        display: table;
+        clear: both; // will works for left & right floats
+    }
+}
