@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { THEME_COLORS } from '@/utils/constants';
 import gsap from 'gsap';
 import { computed, defineComponent, onMounted, ref, watch } from 'vue'
@@ -6,16 +6,12 @@ import { computed, defineComponent, onMounted, ref, watch } from 'vue'
 export default defineComponent({
   name: 'SimpleCtaComponent',
   props: {
-    theme: {type: String, default: 'light'}
+    ctaTheme: {type: String, default: 'light'}
   },
   setup(props){
     const hover = ref(false)
     const progressBottomAngles = ref(100)
     const progressTopAngles = ref(100)
-
-    const color = computed(() => {
-      return THEME_COLORS[props.theme]
-    })
 
     const tl = gsap.timeline({ paused: true })
 
@@ -40,7 +36,7 @@ export default defineComponent({
     })
 
     return {
-      color,
+      color: THEME_COLORS[ctaTheme],
       hover,
       progressTopAngles,
       progressBottomAngles,

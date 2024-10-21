@@ -22,7 +22,7 @@ export default defineComponent({
     <slot name="body"></slot>
     <p class="p">You can find the 
       <SimpleCtaComponent
-        theme="projects_contrast"
+        cta-theme="projects_contrast"
         target="_blank" 
         rel="nofollow noopener noreferrer"
         :href="caseLink"

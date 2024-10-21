@@ -28,7 +28,7 @@ export default defineComponent({
         <li class="head-4">
           Dolce&Gabbana Beauty - Dolce | 
           <SimpleCtaComponent
-            theme="projects_contrast"
+            cta-theme="projects_contrast"
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://monogrid.com/en/project/dolcegabbana-beauty-dolce"
@@ -36,14 +36,14 @@ export default defineComponent({
         </li>
         <li class="head-4">Galleria Nazionale delle Marche - La Galleria Ideale | 
           <SimpleCtaComponent
-            theme="projects_contrast"
+            cta-theme="projects_contrast"
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://galleriaideale.gndm.it/it/"
           >link</SimpleCtaComponent>
           |
           <SimpleCtaComponent
-            theme="projects_contrast"
+            cta-theme="projects_contrast"
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://monogrid.com/en/project/gndm-la-galleria-ideale"
@@ -51,14 +51,14 @@ export default defineComponent({
         </li>
         <li class="head-4">Expo 58 - Immersive Experience |
           <SimpleCtaComponent
-            theme="projects_contrast"
+            cta-theme="projects_contrast"
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://expo-58.historia.europa.eu/#/en/"
           >link</SimpleCtaComponent>
           |
           <SimpleCtaComponent
-            theme="projects_contrast"
+            cta-theme="projects_contrast"
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://monogrid.com/en/project/expo-58-immersive-experience"
@@ -66,7 +66,7 @@ export default defineComponent({
         </li>
         <li class="head-4">Engine - AR Experience | 
           <SimpleCtaComponent
-            theme="projects_contrast"
+            cta-theme="projects_contrast"
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://monogrid.com/en/project/engine-ar-experience"
