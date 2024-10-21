@@ -28,8 +28,14 @@ export default defineComponent({
 <style lang="scss" scoped>
 // 
 .wrapper {
-  min-height: 100vh;
+  height: 100svh;
   width: 100vw;
   padding: rem(12) 0;
+  overflow: hidden;
+
+  @include screen(lg) {
+    padding: 0;
+  }
+    
 }
 </style>

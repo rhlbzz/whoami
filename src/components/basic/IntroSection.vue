@@ -34,9 +34,5 @@ export default defineComponent({
 .wrapper {
   width: 100vw;
   min-height: 100svh;
-
-  @include screen(lg) {
-    padding: rem(0) rem($safe-area-x);
-  }
 }
 </style>

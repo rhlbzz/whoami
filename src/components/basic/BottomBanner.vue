@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="bottom-banner fixed bottom-2 left-0 right-0 flex items-center justify-between flex-col lg:flex-row lg:safe-area">
+  <div class="bottom-banner fixed bottom-2 left-0 right-0 flex items-center justify-between flex-col intro-safe-area lg:flex-row">
     <CtaRouter 
       bigger
       :to="{name: 'Presentation'}"
