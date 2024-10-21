@@ -10,7 +10,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "tunnel": "npx untun@latest tunnel http://localhost:5173"
   },
   "dependencies": {
     "@unocss/preset-uno": "^0.58.4",

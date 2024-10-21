@@ -78,6 +78,7 @@ export default defineComponent({
     :style="{
       '--progress-bottom-angles': `${progressBottomAngles}%`,
       '--progress-top-angles': `${progressTopAngles}%`,
+      '--color': bgColor,
       '--bg-color': bgColor
     }"
     @mouseenter="hover = true"
@@ -104,16 +105,34 @@ export default defineComponent({
     @include hover {
       &:hover { 
         color: $c-dark;
+
+        &::after {
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+      
+      &::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 2px;
+        bottom: -4px;
+        left: -8px;
+        padding: 0 4px;
+        background-color: var(--color);
+        transform: scaleX(1);
+        transition: transform 0.3s ease-in-out;
       }
 
       &::before {
         position: absolute;
         content: "";
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 120%;
-        height: 150%;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        bottom: -4px;
+        left: -8px;
+        padding: 0 4px;
         clip-path: polygon(0% var(--progress-top-angles), 100% var(--progress-top-angles), 100% var(--progress-bottom-angles), 0 var(--progress-bottom-angles));
         background-color: var(--bg-color);
       }
