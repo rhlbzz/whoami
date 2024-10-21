@@ -72,8 +72,16 @@ img {
   font-weight: bold;
 }
 
+.intro-safe-area {
+  padding: rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2)) rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2));
+
+  @include screen(lg) {
+    padding: rem($safe-area-y) rem($safe-area-x);
+  }
+}
+
 .safe-area {
-  padding: rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2)) rem(calc($safe-area-y /2)) rem(calc($safe-area-y /2));
+  padding: rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2)) rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2));
 
   @include screen(lg) {
     padding: rem($safe-area-y) rem($safe-area-x);

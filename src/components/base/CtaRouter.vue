@@ -1,4 +1,5 @@
 <script lang="ts">
+import { isMobile } from 'mobile-device-detect'
 import { computed, defineComponent, onMounted, ref, watch, type PropType } from 'vue'
 import IconComponent, { type Icons } from '@/components/base/IconComponent.vue';
 import gsap from 'gsap';
@@ -48,6 +49,7 @@ export default defineComponent({
     onMounted(initAnimation)
 
     watch(hover, (value) => {
+      if (isMobile) return
       if (value) tl.tweenFromTo('enter', 'leave')
       else tl.tweenFromTo('leave', 'end')
 
@@ -111,32 +113,54 @@ export default defineComponent({
           transition: transform 0.3s ease-in-out;
         }
       }
-      
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% + 4px);
+      height: 1px;
+      bottom: -1px;
+      left: -2px;
+      padding: 0 2px;
+      background-color: var(--color);
+      transform: scaleX(1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      bottom: -1px;
+      left: -4px;
+      padding: 0 2px;
+      clip-path: polygon(0% var(--progress-top-angles), 100% var(--progress-top-angles), 100% var(--progress-bottom-angles), 0 var(--progress-bottom-angles));
+      background-color: var(--bg-color);
+    }
+
+    
+    
+    @include screen(lg) {
       &::after {
         content: "";
-        position: absolute;
         width: calc(100% + 8px);
         height: 2px;
         bottom: -4px;
         left: -8px;
         padding: 0 4px;
-        background-color: var(--color);
-        transform: scaleX(1);
-        transition: transform 0.3s ease-in-out;
       }
 
       &::before {
-        position: absolute;
-        content: "";
         width: calc(100% + 8px);
         height: calc(100% + 8px);
         bottom: -4px;
         left: -8px;
         padding: 0 4px;
-        clip-path: polygon(0% var(--progress-top-angles), 100% var(--progress-top-angles), 100% var(--progress-bottom-angles), 0 var(--progress-bottom-angles));
-        background-color: var(--bg-color);
       }
     }
+    
   }
 }
 

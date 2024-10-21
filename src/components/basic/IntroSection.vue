@@ -15,8 +15,8 @@ export default defineComponent({
 
 <template>
   <!-- <section class="wrapper flex flex-col justify-center items-start"> -->
-  <section class="wrapper safe-area flex justify-center items-center flex-col lg:flex-row">
-    <div class="flex flex-col column-01 justify-center items-center lg:items-start lg:w-[80%]">
+  <section class="wrapper overflow-hidden intro-safe-area flex justify-center items-center flex-col lg:flex-row">
+    <div class="flex flex-col column-01 justify-center items-center text-center lg:text-left lg:items-start lg:w-[80%]">
       <h2 class="head-4">Hi there! I'm</h2>
       <h1 class="head-1">Rachele Bizzarri</h1>
       <h2 class="head-4">and I am a</h2>
@@ -33,9 +33,7 @@ export default defineComponent({
 // 
 .wrapper {
   width: 100vw;
-  height: 100svh;
-
-  padding: rem(0) rem(calc($safe-area-x / 3.5));
+  min-height: 100svh;
 
   @include screen(lg) {
     padding: rem(0) rem($safe-area-x);

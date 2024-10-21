@@ -1,4 +1,5 @@
 <script lang="ts">
+import { isMobile } from 'mobile-device-detect'
 import { THEME_COLORS } from '@/utils/constants';
 import gsap from 'gsap';
 import { defineComponent, onMounted, ref, watch, type PropType } from 'vue'
@@ -32,6 +33,7 @@ export default defineComponent({
     onMounted(initAnimation)
 
     watch(hover, (value) => {
+      if (isMobile) return
       if (value) tl.tweenFromTo('enter', 'leave')
       else tl.tweenFromTo('leave', 'end')
 

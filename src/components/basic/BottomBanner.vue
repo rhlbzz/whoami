@@ -21,24 +21,24 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="bottom-banner safe-area fixed bottom-2 left-0 right-0 flex items-center justify-between flex-col lg:flex-row">
+  <div class="bottom-banner fixed bottom-2 left-0 right-0 flex items-center justify-between flex-col lg:flex-row lg:safe-area">
     <CtaRouter 
       bigger
       :to="{name: 'Presentation'}"
       third
-      class="font-bold py-2 lg:py-0"
+      class="font-bold my-1 lg:my-0"
     >Who Am I?</CtaRouter>
     <CtaRouter 
       bigger
       :to="{name: 'Projects'}"
       orange
-      class="font-bold py-2 lg:py-0"
+      class="font-bold my-1 lg:my-0"
     >Things I've worked on</CtaRouter>
     <CtaRouter 
       bigger
       :to="{name: 'Contacts'}"
       fourth
-      class="font-bold py-2 lg:py-0"
+      class="font-bold my-1 lg:my-0"
     >Where to find me</CtaRouter>
   </div>
 </template>

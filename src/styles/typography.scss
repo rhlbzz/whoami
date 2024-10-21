@@ -61,6 +61,7 @@ a {
 
 .p {
   font-size: rem(16);
+  line-height: 1.5em;
 
   @include screen(lg) {
     font-size: rem(18);

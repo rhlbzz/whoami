@@ -31,7 +31,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 // 
 .wrapper {
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   overflow: hidden;
   background-color: $c-dark;

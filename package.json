@@ -18,6 +18,7 @@
     "@unocss/transformer-directives": "^0.63.4",
     "@vueuse/core": "^11.1.0",
     "gsap": "^3.12.5",
+    "mobile-device-detect": "^0.4.3",
     "unocss": "^0.58.4",
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.4.15",
