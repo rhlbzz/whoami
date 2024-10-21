@@ -31,7 +31,6 @@ export default defineComponent({
   height: 100svh;
   width: 100vw;
   padding: rem(12) 0;
-  overflow: hidden;
 
   @include screen(lg) {
     padding: 0;
