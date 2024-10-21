@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { computed, defineComponent, onMounted, ref, watch } from 'vue'
 
 export default defineComponent({
-  name: 'CtaComponent',
+  name: 'SimpleCtaComponent',
   props: {
     theme: {type: String, default: 'light'}
   },
