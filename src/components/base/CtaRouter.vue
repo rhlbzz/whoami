@@ -1,6 +1,6 @@
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref, watch } from 'vue'
-import IconComponent from '@/components/base/IconComponent.vue';
+import { computed, defineComponent, onMounted, ref, watch, type PropType } from 'vue'
+import IconComponent, { type Icons } from '@/components/base/IconComponent.vue';
 import gsap from 'gsap';
 import { THEME_COLORS } from '@/utils/constants';
 
@@ -10,7 +10,7 @@ export default defineComponent({
     IconComponent
   },
   props: {
-    icon: { type: String, default: undefined },
+    icon: { type: String as PropType<Icons>, default: undefined },
     to: { type: Object, required: true},
     bigger: { type: Boolean, default: false },
     third: { type: Boolean, default: false },

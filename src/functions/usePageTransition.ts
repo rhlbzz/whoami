@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { ref, watch } from "vue";
-import { onBeforeRouteLeave } from "vue-router";
+import { onBeforeRouteLeave, type RouteLocationNormalized, type RouteLocationRaw, type RouteRecordName } from "vue-router";
 
 export const routeTo = ref('Home')
 export const timelinePageTransition = gsap.timeline({ paused: true })
@@ -8,10 +8,9 @@ export const endPageTransition = ref(false)
 export const finishPageTransition = ref(false)
 
 export const usePageTransition = () => {
-  const routeLeave = async (to) => {
-    routeTo.value = to.name
-    console.log('route to ', routeTo.value)
-    await new Promise((resolve, reject) => {
+  const routeLeave = async (to: RouteLocationNormalized) => {
+    routeTo.value = to.name as string
+    await new Promise((resolve) => {
       timelinePageTransition.tweenFromTo(`enter-${routeTo.value}`, `leave-${routeTo.value}`, {
         onStart: () => {
           finishPageTransition.value = false
