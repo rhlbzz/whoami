@@ -40,7 +40,7 @@ export default defineComponent({
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://galleriaideale.gndm.it/it/"
-          >link</SimpleCtaComponent>
+          >website</SimpleCtaComponent>
           |
           <SimpleCtaComponent
             cta-theme="projects_contrast"
@@ -55,7 +55,7 @@ export default defineComponent({
             target="_blank" 
             rel="nofollow noopener noreferrer"
             href="https://expo-58.historia.europa.eu/#/en/"
-          >link</SimpleCtaComponent>
+          >website</SimpleCtaComponent>
           |
           <SimpleCtaComponent
             cta-theme="projects_contrast"
