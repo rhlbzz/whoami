@@ -1,15 +1,26 @@
 @import './global.scss';
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  margin: none;
+  padding: none;
+  border: none;
+}
+
 body {
-  background-color: $c-dark;
-  color: $c-light;
-  font-family: 'Titillium Web', sans-serif; 
-  color: $c-light;
-  background: $c-dark;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+img {
+  user-select: none;
 }
 
 .page {
-  padding: 20px 20px 40px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,57 +53,43 @@ body {
   font-style: normal;
 }
 
-h1,
-h2,
-h3,
-p,
-button 
-a {
-  font-family: "Spline Sans Mono", monospace;// 'Titillium Web', sans-serif;
-}
 
-h1,
-h2,
-h3 {
-  margin-bottom: 20px;
-}
-
-.head-1 {
-  font-size: 52px;
-}
-
-p {
-  line-height: 1.5;
+.c-presentation-contrast {
+  color: $c-presentation-contrast;
 }
 
 
-.paragraph-1 {
-  font-size: 16px;
+.c-projects-contrast {
+  color: $c-projects-contrast;
 }
 
-label {
-  font-size: 16px;
+.c-contacts-contrast {
+  color: $c-contacts-contrast;
 }
-
 
 .highlight {
   color: $c-seafoam;
   font-weight: bold;
 }
 
-a,
-.link {
-  text-decoration: none;
-  color: $c-mint;
-  transition: color 0.5s ease-out;
+.safe-area {
+  padding: rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2)) rem(calc($safe-area-y /2)) rem(calc($safe-area-y /2));
 
-  &:hover {
-    color: $c-parakeet;
-    transition: color 0.5s ease-out;
+  @include screen(lg) {
+    padding: rem($safe-area-y) rem($safe-area-x);
   }
 }
 
+a,
+.link {
+  text-decoration: none;
+}
+
 ::selection {
-  background-color: $c-mint;
+  background-color: $c-green;
   color: $c-dark;
+}
+
+.c-yellow {
+  color: $c-highlight;
 }

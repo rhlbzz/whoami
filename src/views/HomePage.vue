@@ -1,24 +1,39 @@
 <script lang="ts">
-import HelloWorld from '@/components/basic/HelloWorld.vue';
-import { defineComponent } from 'vue'
+import BottomBanner from '@/components/basic/BottomBanner.vue';
+import IntroSection from '@/components/basic/IntroSection.vue';
+import { usePageTransition } from '@/functions/usePageTransition';
+import { defineComponent} from 'vue'
 
 export default defineComponent({
     name: 'HomePage',
     components: {
-      HelloWorld
+      BottomBanner,
+      IntroSection,
     },
     setup() {
-        return {}
+
+      usePageTransition()
     }
 
 })
 </script>
 
 <template>
-  <section class="w-full h-full flex items-center justify-center">
-    <HelloWorld/>
-    <div v-if="false" class="mt-5">
-      <p>If you wanna take a look at some projects I've worked on, <RouterLink class="link" :to="{name: 'Projects'}">check it out</RouterLink>!</p>
-    </div>
+  <section class="wrapper w-full h-full flex items-center justify-center">
+
+    <IntroSection class="w-full h-full intro" />
+
+    <BottomBanner />
+    
   </section>
 </template>
+
+<style lang="scss" scoped>
+// 
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: $c-dark;
+  color: $c-light;
+}
+</style>
