@@ -33,7 +33,7 @@ export default defineComponent({
 // 
 .wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
 
   padding: rem(0) rem(calc($safe-area-x / 3.5));
 

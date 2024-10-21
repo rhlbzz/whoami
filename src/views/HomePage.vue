@@ -33,6 +33,7 @@ export default defineComponent({
 .wrapper {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   background-color: $c-dark;
   color: $c-light;
 }
