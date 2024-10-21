@@ -28,7 +28,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 // 
 .wrapper {
-  height: 100svh;
+  min-height: 100svh;
   width: 100vw;
   padding: rem(12) 0;
 
