@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ButtonComponent from '@/components/base/ButtonComponent.vue';
 import CtaRouter from '@/components/base/CtaRouter.vue';
 
 export default defineComponent({

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import { THEME_COLORS } from '@/utils/constants';
 import gsap from 'gsap';
 import { computed, defineComponent, onMounted, ref, watch } from 'vue'
@@ -14,7 +14,6 @@ export default defineComponent({
     const progressTopAngles = ref(100)
 
     const color = computed(() => {
-      console.log('THEME_COLORS[props.theme] ', THEME_COLORS[props.theme])
       return THEME_COLORS[props.theme]
     })
 

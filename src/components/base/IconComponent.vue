@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import { computed, defineComponent } from 'vue'
 import cross from '@/assets/svg/cross.svg'
 
