@@ -1,11 +1,11 @@
-import { createRouter, createMemoryHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/views/HomePage.vue'
 import ProjectsPage from '@/views/ProjectsPage.vue'
 import PresentationPage from '@/views/PresentationPage.vue'
 import ContactsPage from '@/views/ContactsPage.vue'
 
 const router = createRouter({
-  history: createMemoryHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
