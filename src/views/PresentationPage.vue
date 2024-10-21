@@ -34,7 +34,7 @@ export default defineComponent({
       <p class="p mt-3">Beside these two work-related passions, I consider myself really picky in my music tastes and I am a demanding reader, and I believe that the same attention is reflected in how I manage my daily work: I am <span class="c-presentation-contrast">always looking</span> for the <span class="c-presentation-contrast">perfect detail</span> or the <span class="c-presentation-contrast">most beautiful solution</span> that could help in reaching the <span class="c-presentation-contrast">right compromise</span> for deliver not only a <span class="c-presentation-contrast">functional</span> work but <span class="c-preesentation-contrast">aesthetic</span>.</p>
       <p class="p mt-3">At the moment, I’m working at 
         <SimpleCtaComponent 
-        theme="presentation_contrast"
+        cta-theme="presentation_contrast"
         href="https://www.monogrid.com"
         target="_blank" 
         rel="nofollow noopener noreferrer"

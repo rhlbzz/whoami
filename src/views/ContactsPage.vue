@@ -30,14 +30,14 @@ export default defineComponent({
     <template #body>
       <p class="p">If you wanna get in touch you can write me an email at 
       <SimpleCtaComponent 
-        theme="contacts_contrast"
+        cta-theme="contacts_contrast"
         target="_blank" 
         rel="nofollow noopener noreferrer"
         :href="'mailto:'+GMAIL_MAIL"
       >rachebizz@gmail.com</SimpleCtaComponent> 
       or we can connect on 
       <SimpleCtaComponent 
-        theme="contacts_contrast"
+        cta-theme="contacts_contrast"
         target="_blank" 
         rel="nofollow noopener noreferrer"
         :href="LINKEDIN_PROFILE_LINK"

@@ -1,14 +1,16 @@
 <script lang="ts">
 import { THEME_COLORS } from '@/utils/constants';
 import gsap from 'gsap';
-import { computed, defineComponent, onMounted, ref, watch } from 'vue'
+import { defineComponent, onMounted, ref, watch, type PropType } from 'vue'
+
+type ColorsType = 'purpled' | 'presentation_contrast' |'contacts_contrast' | 'projects_contrast'
 
 export default defineComponent({
   name: 'SimpleCtaComponent',
   props: {
-    ctaTheme: {type: String, default: 'light'}
+    ctaTheme: {type: String as PropType<ColorsType>, default: 'purpled'}
   },
-  setup(props){
+  setup(){
     const hover = ref(false)
     const progressBottomAngles = ref(100)
     const progressTopAngles = ref(100)
@@ -36,7 +38,7 @@ export default defineComponent({
     })
 
     return {
-      color: THEME_COLORS[ctaTheme],
+      THEME_COLORS,
       hover,
       progressTopAngles,
       progressBottomAngles,
@@ -52,7 +54,7 @@ export default defineComponent({
     :style="{
         '--progress-bottom-angles': `${progressBottomAngles}%`,
         '--progress-top-angles': `${progressTopAngles}%`,
-        '--color': color,
+        '--color': THEME_COLORS[ctaTheme],
       }"    
     @mouseenter="hover = true"
     @mouseleave="hover = false"

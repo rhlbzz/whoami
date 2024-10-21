@@ -1,6 +1,6 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
-import IconComponent from '@/components/base/IconComponent.vue'
+import { defineComponent, type PropType } from 'vue'
+import IconComponent, { type Icons } from '@/components/base/IconComponent.vue'
 
 export default defineComponent({
   name: 'CtaIcon',
@@ -8,14 +8,14 @@ export default defineComponent({
     IconComponent
   },
   props: {
-    icon: { type: String, require: true }
+    icon: { type: String as PropType<Icons>, require: true }
   }
 })
 </script>
 
 <template>
   <button class="cta-icon flex items-center justify-center cursor-pointer">
-    <IconComponent :icon="icon" class="icon" />
+    <IconComponent :icon="icon as Icons" class="icon" />
   </button>
 </template>
 

@@ -1,21 +1,21 @@
-<script>
-import { computed, defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent, type PropType } from 'vue'
 import cross from '@/assets/svg/cross.svg'
 
 const icons = {
   'cross': cross,
 }
 
+export type Icons = 'cross'
+
 export default defineComponent({
   name: 'IconComponent',
   props: {
-    icon: { type: String, required: true }
+    icon: { type: String as PropType<Icons>, required: true }
   },
   setup (props) {
-    const component = computed(() => (icons[props.icon]))
-
     return {
-      component
+      component: icons[props.icon]
     }
   }
 
