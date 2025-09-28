@@ -16,13 +16,13 @@ export default defineComponent({
 <template>
   <!-- <section class="wrapper flex flex-col justify-center items-start"> -->
   <section class="wrapper overflow-hidden intro-safe-area flex items-center flex-col lg:justify-center lg:flex-row">
-    <div class="flex flex-col items-center text-center mt-[20%] lg:mt-0 lg:text-left lg:items-end">
+    <div class="flex flex-col items-center text-center mt-[20%] text-center lg:text-right lg:mt-0 lg:items-end">
       <h2 class="head-4">Hi there! I'm</h2>
       <h1 class="head-1">Rachele Bizzarri</h1>
       <h2 class="head-4">and I am a</h2>
       <h2 class="head-2">web developer</h2>
     </div>
-    <img :src="SelfImg" class="mt-4 w-[80%] lg:mt-0 lg:w-[auto] h-[auto]" />
+    <img :src="SelfImg" class="mt-4 max-h-[50%] lg:max-h-[100%] lg:mt-0 lg:w-[auto] h-[auto]" />
   </section>
 </template>
 
