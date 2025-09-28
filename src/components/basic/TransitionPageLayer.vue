@@ -2,7 +2,7 @@
 import { defineComponent, onMounted, reactive, ref, watch } from 'vue'
 
 import {timelinePageTransition, routeTo} from '@/functions/usePageTransition'
-import { PageColors, Routes } from '@/utils/types';
+import { Routes } from '@/utils/types';
 import { THEME_COLORS } from '@/utils/constants';
 
 export default defineComponent({

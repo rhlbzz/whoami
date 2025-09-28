@@ -1,8 +1,7 @@
 <script lang="ts">
 import { useMagicKeys, useScrollLock, useVModel } from '@vueuse/core'
-import { defineComponent, ref, watch } from 'vue'
+import { defineComponent, watch } from 'vue'
 import CtaIcon from '@/components/base/CtaIcon.vue';
-import gsap from 'gsap';
 
 export default defineComponent({
     name: 'ModalComponent',
