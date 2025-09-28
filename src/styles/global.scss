@@ -1,17 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Sono&family=Titillium+Web:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300;1,300&display=swap');
-@import './_main.scss';
+@import './typography.scss';
+@import './functions.scss';
 
-$c-dark: #212129;
-$c-light: #F9F9F9;
+$safe-area-y: 32;
+$safe-area-x: 80;
+
 $c-parakeet: #03C04A;
 $c-pistachio: #B2D3C2;
 $c-emerald: #028A0F;
 $c-seafoam: #3DED97;
-$c-mint: #99EDC3;
 $c-go-green: #00AB66;
 $c-jungle-green: #29AB87;
 $c-munsel-green: #00A877;
 
+// used
+
+$c-green-light: #afffd9;
+$c-green: #99EDC3;
+
+// palette 1
+$c-light: #f1fbff; // #eaf3e5;
+$c-dark: #2f4858;
+$c-yellow: #f9f871;
+$c-secondary: #70cbb8;
+$c-highlight: #553e4c; // #f9f871; // #ece684;
+$c-cta: #876e7d; // #ccf6ff;  // #da9bb7; // #beb4ff;
+$c-orange: #f0b566;
+$c-third: #00bbba;
+$c-fourth: #70ebb3;
+
+$c-presentation-contrast: #9c4f9c;
+$c-contacts-contrast: #0082a6;
+$c-projects-contrast: #00864d;
+
+// palette 2 
+// $c-dark: #2f4858;
+// $c-secondary: #294d58;
+// $c-third: #247e81;
+// $c-light: #fdfaf3;
+// $c-cta: #b30d0d;
+// $c-highlight: #f0debb;
+// $c-light-green: #dbe5b9;
+// $c-orange: #ff8157;
