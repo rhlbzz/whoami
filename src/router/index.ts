@@ -17,16 +17,20 @@ const router = createRouter({
       name: 'Presentation',
       component: PresentationPage
     },
-    {
-      path: '/projects',
-      name: 'Projects',
-      component: ProjectsPage
-    },
+    // {
+    //   path: '/projects',
+    //   name: 'Projects',
+    //   component: ProjectsPage
+    // },
     {
       path: '/contacts',
       name: 'Contacts',
       component: ContactsPage
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+    }
   ]
 })
 
