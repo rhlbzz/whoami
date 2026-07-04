@@ -31,7 +31,7 @@ export default defineComponent({
     <template #body>
       <p class="p">
         My name is <span class="c-presentation-contrast">Rachele Bizzarri</span> and I'm working as
-        a <span class="c-presentation-contrast">web developer</span> since
+        a <span class="c-presentation-contrast">front-end developer</span> since
         <span class="c-presentation-contrast">2018</span>.
       </p>
       <p class="p mt-3">
