@@ -20,7 +20,7 @@ export default defineComponent({
       <h2 class="head-4">and I am a</h2>
       <h2 class="head-2">front-end developer</h2>
     </div>
-    <div class="image-container flex-1 mt-4 flex max-w-[50vw] items-center justify-center lg:mt-0">
+    <div class="image-container flex-1 mt-4 flex max-w-[50vw] items-center justify-center lg:max-w-[25vw] lg:mt-0">
       <img :src="SelfImg" class="w-full" />
     </div>
   </section>
