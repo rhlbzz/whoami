@@ -56,13 +56,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 //
-.wrapper {
+.projects-page {
   height: 100vh;
   width: 100vw;
   background-color: $c-orange;
   color: $c-dark;
 
-  --bg-color: $c-orange;
+  --bg-color: #f0b566;
   --accent-color: #00864d;
 }
 
