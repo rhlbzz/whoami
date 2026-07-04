@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { GMAIL_MAIL, LINKEDIN_PROFILE_LINK } from '@/utils/constants'
-import CtaRouter from '@/components/base/CtaRouter.vue'
 import { usePageTransition } from '@/functions/usePageTransition'
 import SimpleCtaComponent from '@/components/base/SimpleCtaComponent.vue'
 import PageLayout from '@/components/basic/PageLayout.vue'
@@ -12,7 +11,7 @@ export default defineComponent({
     PageLayout,
     SimpleCtaComponent
   },
-  setup(props, { emit }) {
+  setup() {
     usePageTransition()
 
     return {

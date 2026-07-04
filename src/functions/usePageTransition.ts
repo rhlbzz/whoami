@@ -1,6 +1,6 @@
-import gsap from "gsap";
-import { ref, watch } from "vue";
-import { onBeforeRouteLeave, type RouteLocationNormalized, type RouteLocationRaw, type RouteRecordName } from "vue-router";
+import gsap from 'gsap'
+import { ref, watch } from 'vue'
+import { onBeforeRouteLeave, type RouteLocationNormalized } from 'vue-router'
 
 export const routeTo = ref('Home')
 export const timelinePageTransition = gsap.timeline({ paused: true })
@@ -24,10 +24,18 @@ export const usePageTransition = () => {
     })
   }
 
-  onBeforeRouteLeave(async (to) => (await routeLeave(to)))
+  onBeforeRouteLeave(async (to) => await routeLeave(to))
 
-  watch(endPageTransition, (value) => {
-    if (!value) return    
-    timelinePageTransition.tweenFromTo(`leave-${routeTo.value}`, 'end', { onComplete: () => {finishPageTransition.value = true} })
-  }, {immediate: true})
+  watch(
+    endPageTransition,
+    (value) => {
+      if (!value) return
+      timelinePageTransition.tweenFromTo(`leave-${routeTo.value}`, 'end', {
+        onComplete: () => {
+          finishPageTransition.value = true
+        }
+      })
+    },
+    { immediate: true }
+  )
 }
