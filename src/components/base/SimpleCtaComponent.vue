@@ -1,17 +1,17 @@
 <script lang="ts">
 import { isMobile } from 'mobile-device-detect'
-import { THEME_COLORS } from '@/utils/constants';
-import gsap from 'gsap';
+import { THEME_COLORS } from '@/utils/constants'
+import gsap from 'gsap'
 import { defineComponent, onMounted, ref, watch, type PropType } from 'vue'
 
-type ColorsType = 'purpled' | 'presentation_contrast' |'contacts_contrast' | 'projects_contrast'
+type ColorsType = 'purpled' | 'presentation_contrast' | 'contacts_contrast' | 'projects_contrast'
 
 export default defineComponent({
   name: 'SimpleCtaComponent',
   props: {
-    ctaTheme: {type: String as PropType<ColorsType>, default: 'purpled'}
+    ctaTheme: { type: String as PropType<ColorsType>, default: 'purpled' }
   },
-  setup(){
+  setup() {
     const hover = ref(false)
     const progressBottomAngles = ref(100)
     const progressTopAngles = ref(100)
@@ -19,15 +19,19 @@ export default defineComponent({
     const tl = gsap.timeline({ paused: true })
 
     function initAnimation() {
-      tl.to(progressTopAngles, { value: 0, duration: 0.3, ease: 'power2.inOut'}, 'enter')
-      tl.to(progressBottomAngles, { value: 0, duration: 0.3, ease: 'power2.inOut'}, 'leave')
-      tl.to({}, {
-        duration: 0.01, 
-        onComplete: () => {
-          progressTopAngles.value = 100
-          progressBottomAngles.value = 100
-        }
-      }, 'end')
+      tl.to(progressTopAngles, { value: 0, duration: 0.3, ease: 'power2.inOut' }, 'enter')
+      tl.to(progressBottomAngles, { value: 0, duration: 0.3, ease: 'power2.inOut' }, 'leave')
+      tl.to(
+        {},
+        {
+          duration: 0.01,
+          onComplete: () => {
+            progressTopAngles.value = 100
+            progressBottomAngles.value = 100
+          }
+        },
+        'end'
+      )
     }
 
     onMounted(initAnimation)
@@ -36,28 +40,27 @@ export default defineComponent({
       if (isMobile) return
       if (value) tl.tweenFromTo('enter', 'leave')
       else tl.tweenFromTo('leave', 'end')
-
     })
 
     return {
       THEME_COLORS,
       hover,
       progressTopAngles,
-      progressBottomAngles,
+      progressBottomAngles
     }
   }
 })
 </script>
 
 <template>
-  <a 
-    v-bind="$attrs" 
+  <a
+    v-bind="$attrs"
     class="simple-cta-component relative inline-block"
     :style="{
-        '--progress-bottom-angles': `${progressBottomAngles}%`,
-        '--progress-top-angles': `${progressTopAngles}%`,
-        '--color': THEME_COLORS[ctaTheme],
-      }"    
+      '--progress-bottom-angles': `${progressBottomAngles}%`,
+      '--progress-top-angles': `${progressTopAngles}%`,
+      '--color': THEME_COLORS[ctaTheme]
+    }"
     @mouseenter="hover = true"
     @mouseleave="hover = false"
   >
@@ -67,17 +70,17 @@ export default defineComponent({
   </a>
 </template>
 
-
-
 <style lang="scss" scoped>
 .simple-cta-component {
-  transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    font-weight 0.3s ease-in-out;
   font-weight: normal;
-  color: var(--color);
+  color: var(--accent-color, var(--color));
 
   @include hover {
-    &:hover { 
-      color: $c-dark;
+    &:hover {
+      color: var(--bg-color, $c-dark);
       font-weight: bold;
 
       &::after {
@@ -88,7 +91,7 @@ export default defineComponent({
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
@@ -102,7 +105,7 @@ export default defineComponent({
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: calc(100% + 2px);
     bottom: -2px;
@@ -112,5 +115,4 @@ export default defineComponent({
     background-color: var(--color);
   }
 }
-
 </style>

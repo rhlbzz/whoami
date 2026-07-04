@@ -1,8 +1,9 @@
 @import './global.scss';
 
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 button {
@@ -24,9 +25,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100svh;
 }
 
-.font-default {  
+.font-default {
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -39,25 +41,22 @@ img {
 }
 
 .font-pixelify {
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
 
 .font-spline-sans-mono {
-  font-family: "Spline Sans Mono", monospace;
+  font-family: 'Spline Sans Mono', monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
 
 .c-presentation-contrast {
   color: $c-presentation-contrast;
 }
-
 
 .c-projects-contrast {
   color: $c-projects-contrast;
@@ -73,7 +72,7 @@ img {
 }
 
 .intro-safe-area {
-  padding: rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 2)) rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 2));
+  padding: rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 6)) rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 6));
 
   @include screen(lg) {
     padding: rem($safe-area-y) rem($safe-area-x);
@@ -81,7 +80,7 @@ img {
 }
 
 .safe-area {
-  padding: rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2)) rem(calc($safe-area-y /2)) rem(calc($safe-area-x /2));
+  padding: rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 2)) rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 2));
 
   @include screen(lg) {
     padding: rem($safe-area-y) rem($safe-area-x);
