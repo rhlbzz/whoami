@@ -24,12 +24,9 @@ export default defineComponent({
     <CtaRouter bigger :to="{ name: 'Presentation' }" third class="font-bold my-1 lg:my-0">
       Who Am I?
     </CtaRouter>
-    <!-- <CtaRouter 
-      bigger
-      :to="{name: 'Projects'}"
-      orange
-      class="font-bold my-1 lg:my-0"
-    >Things I've worked on</CtaRouter> -->
+    <CtaRouter bigger :to="{ name: 'Projects' }" orange class="font-bold my-1 lg:my-0"
+      >Things I've worked on</CtaRouter
+    >
     <CtaRouter bigger :to="{ name: 'Contacts' }" fourth class="font-bold my-1 lg:my-0">
       Where to find me
     </CtaRouter>

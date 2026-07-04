@@ -71,9 +71,8 @@ export default defineComponent({
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
-          HexErgy
-        </SimpleCtaComponent>
-        in <span class="c-presentation-contrast">Florence</span> .
+          HexErgy </SimpleCtaComponent
+        >.
       </p>
     </template>
   </PageLayout>
