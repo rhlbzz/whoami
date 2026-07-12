@@ -12,7 +12,7 @@ export default defineComponent({
 
 <template>
   <section class="wrapper w-full h-full flex items-center">
-    <CtaRouter :to="{ name: 'Home' }" icon="cross" class="fixed top-2 right-2 lg:top-8 lg:right-8" />
+    <CtaRouter :to="{ name: 'Home' }" icon="cross" class="homepage fixed top-2 right-2 lg:top-8 lg:right-8" />
     <div class="safe-area">
       <h1 class="head-1 mb-4 lg:mb-8">
         <slot name="title" />

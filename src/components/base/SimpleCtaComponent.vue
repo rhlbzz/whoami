@@ -9,7 +9,7 @@ type ColorsType = 'purpled' | 'presentation_contrast' | 'contacts_contrast' | 'p
 export default defineComponent({
   name: 'SimpleCtaComponent',
   props: {
-    ctaTheme: { type: String as PropType<ColorsType>, default: 'purpled' }
+    ctaTheme: { type: String as PropType<ColorsType>, default: null }
   },
   setup() {
     const hover = ref(false)
@@ -98,7 +98,7 @@ export default defineComponent({
     bottom: -2px;
     left: -4px;
     padding: 0 4px;
-    background-color: var(--color);
+    background-color: var(--accent-color, var(--color));
     transform: scaleX(1);
     transition: transform 0.3s ease-in-out;
   }
@@ -112,7 +112,7 @@ export default defineComponent({
     left: -4px;
     padding: 0 4px;
     clip-path: polygon(0% var(--progress-top-angles), 100% var(--progress-top-angles), 100% var(--progress-bottom-angles), 0 var(--progress-bottom-angles));
-    background-color: var(--color);
+    background-color: var(--accent-color, var(--color));
   }
 }
 </style>

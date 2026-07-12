@@ -30,9 +30,9 @@ export default defineComponent({
     <template #body>
       <p class="p">
         If you wanna get in touch you can write me an email at
-        <SimpleCtaComponent cta-theme="contacts_contrast" target="_blank" rel="nofollow noopener noreferrer" :href="'mailto:' + GMAIL_MAIL">rachebizz@gmail.com</SimpleCtaComponent>
+        <SimpleCtaComponent class="contacts" target="_blank" rel="nofollow noopener noreferrer" :href="'mailto:' + GMAIL_MAIL">rachebizz@gmail.com</SimpleCtaComponent>
         or we can connect on
-        <SimpleCtaComponent cta-theme="contacts_contrast" target="_blank" rel="nofollow noopener noreferrer" :href="LINKEDIN_PROFILE_LINK">LinkedIn</SimpleCtaComponent>
+        <SimpleCtaComponent class="contacts" target="_blank" rel="nofollow noopener noreferrer" :href="LINKEDIN_PROFILE_LINK">LinkedIn</SimpleCtaComponent>
         🙃 !
       </p>
     </template>
@@ -44,8 +44,5 @@ export default defineComponent({
 .contacts-page {
   background-color: $c-fourth;
   color: $c-dark;
-
-  --bg-color: #70ebb3;
-  --accent-color: #0082a6;
 }
 </style>

@@ -1,162 +1,193 @@
 <script lang="ts">
 import { defineComponent, onMounted, reactive, ref, watch } from 'vue'
 
-import {timelinePageTransition, routeTo} from '@/functions/usePageTransition'
-import { Routes } from '@/utils/types';
-import { THEME_COLORS } from '@/utils/constants';
+import { timelinePageTransition, routeTo } from '@/functions/usePageTransition'
+import { Routes } from '@/utils/types'
+import { THEME_COLORS } from '@/utils/constants'
 
 export default defineComponent({
-    name: 'TransitionPageLayer',
-    setup() {
-      const presentationTransitionProgress = reactive({
-        topLeftFirst: 0,
-        topLeftSecond: 100,
-        topRightFirst: 0,
-        topRightSecond: 100,
-        bottomRightFirst: 0,
-        bottomRightSecond: 100,
-        bottomLeftFirst: 0,
-        bottomLeftSecond: 100
-      })
+  name: 'TransitionPageLayer',
+  setup() {
+    const presentationTransitionProgress = reactive({
+      topLeftFirst: 0,
+      topLeftSecond: 100,
+      topRightFirst: 0,
+      topRightSecond: 100,
+      bottomRightFirst: 0,
+      bottomRightSecond: 100,
+      bottomLeftFirst: 0,
+      bottomLeftSecond: 100
+    })
 
-      const contactsTransitionProgress = reactive({
-        topLeftFirst: 100,
-        topLeftSecond: 100,
-        topRightFirst: 100,
-        topRightSecond: 100,
-        bottomRightFirst: 100,
-        bottomRightSecond: 100,
-        bottomLeftFirst: 100,
-        bottomLeftSecond: 100
-      })
+    const contactsTransitionProgress = reactive({
+      topLeftFirst: 100,
+      topLeftSecond: 100,
+      topRightFirst: 100,
+      topRightSecond: 100,
+      bottomRightFirst: 100,
+      bottomRightSecond: 100,
+      bottomLeftFirst: 100,
+      bottomLeftSecond: 100
+    })
 
-      const homeTransitionProgress = reactive({
-        topLeft: 0,
-        topRight: 0,
-        bottomRight: 0,
-        bottomLeft: 0
-      })
+    const homeTransitionProgress = reactive({
+      topLeft: 0,
+      topRight: 0,
+      bottomRight: 0,
+      bottomLeft: 0
+    })
 
-      const projectsTransitionProgress = reactive({
-        topLeft: 100,
-        topRight: 100,
-        bottomRight: 100,
-        bottomLeft: 100
-      })
+    const projectsTransitionProgress = reactive({
+      topLeft: 100,
+      topRight: 100,
+      bottomRight: 100,
+      bottomLeft: 100
+    })
 
-      const bgColor = ref(THEME_COLORS.light)
+    const bgColor = ref(THEME_COLORS.light)
 
-      function homeTransition() {
-        timelinePageTransition.to(homeTransitionProgress, {
+    function homeTransition() {
+      timelinePageTransition.to(
+        homeTransitionProgress,
+        {
           bottomRight: 100,
           bottomLeft: 100,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `enter-${Routes.HOME}`)
+        },
+        `enter-${Routes.HOME}`
+      )
 
-        timelinePageTransition.to(homeTransitionProgress, {
+      timelinePageTransition.to(
+        homeTransitionProgress,
+        {
           topLeft: 100,
           topRight: 100,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `leave-${Routes.HOME}`)
-      }
+        },
+        `leave-${Routes.HOME}`
+      )
+    }
 
-      function projectsTransition() {
-        timelinePageTransition.to(projectsTransitionProgress, {
+    function projectsTransition() {
+      timelinePageTransition.to(
+        projectsTransitionProgress,
+        {
           topLeft: 0,
           topRight: 0,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `enter-${Routes.PROJECTS}`)
+        },
+        `enter-${Routes.PROJECTS}`
+      )
 
-        timelinePageTransition.to(projectsTransitionProgress, {
+      timelinePageTransition.to(
+        projectsTransitionProgress,
+        {
           bottomRight: 0,
           bottomLeft: 0,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `leave-${Routes.PROJECTS}`)
-      }
+        },
+        `leave-${Routes.PROJECTS}`
+      )
+    }
 
-      function presentationTransition() {
-        
-        timelinePageTransition.to(presentationTransitionProgress, { 
+    function presentationTransition() {
+      timelinePageTransition.to(
+        presentationTransitionProgress,
+        {
           topLeftSecond: 0,
           topRightFirst: 100,
           topRightSecond: 0,
           bottomRightFirst: 100,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `enter-${Routes.PRESENTATION}`)
+        },
+        `enter-${Routes.PRESENTATION}`
+      )
 
-        timelinePageTransition.to(presentationTransitionProgress, { 
+      timelinePageTransition.to(
+        presentationTransitionProgress,
+        {
           topLeftFirst: 100,
           bottomRightSecond: 0,
           bottomLeftFirst: 100,
           bottomLeftSecond: 0,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `leave-${Routes.PRESENTATION}`)
-        
-      }
+        },
+        `leave-${Routes.PRESENTATION}`
+      )
+    }
 
-      function contactsTransition() {
-        
-        timelinePageTransition.to(contactsTransitionProgress, { 
+    function contactsTransition() {
+      timelinePageTransition.to(
+        contactsTransitionProgress,
+        {
           topLeftFirst: 0,
           topLeftSecond: 0,
           topRightSecond: 0,
           bottomLeftFirst: 0,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `enter-${Routes.CONTACTS}`)
+        },
+        `enter-${Routes.CONTACTS}`
+      )
 
-        timelinePageTransition.to(contactsTransitionProgress, { 
+      timelinePageTransition.to(
+        contactsTransitionProgress,
+        {
           topRightFirst: 0,
           bottomRightFirst: 0,
           bottomRightSecond: 0,
           bottomLeftSecond: 0,
-          duration: 0.6, 
+          duration: 0.6,
           ease: 'power2.inOut'
-        }, `leave-${Routes.CONTACTS}`)
-        
-      }
-
-      function initAnimation() {
-        homeTransition()
-        presentationTransition()
-        projectsTransition()
-        contactsTransition()
-        timelinePageTransition.to({}, {
-          duration: 0.01, 
-          ease: 'none',
-        }, 'end')
-      }
-
-      onMounted(initAnimation)
-
-      watch(routeTo, (value) => {
-        if (value === Routes.HOME) bgColor.value = THEME_COLORS.purpled
-        else if (value === Routes.PRESENTATION) bgColor.value = THEME_COLORS.presentation_contrast
-        else if (value === Routes.CONTACTS) bgColor.value = THEME_COLORS.contacts_contrast
-        else if (value === Routes.PROJECTS) bgColor.value = THEME_COLORS.projects_contrast
-      })
-
-      return {
-        bgColor,   
-        routeTo, 
-        homeTransitionProgress,
-        presentationTransitionProgress,
-        projectsTransitionProgress,
-        contactsTransitionProgress,
-      }
+        },
+        `leave-${Routes.CONTACTS}`
+      )
     }
 
+    function initAnimation() {
+      homeTransition()
+      presentationTransition()
+      projectsTransition()
+      contactsTransition()
+      timelinePageTransition.to(
+        {},
+        {
+          duration: 0.01,
+          ease: 'none'
+        },
+        'end'
+      )
+    }
+
+    onMounted(initAnimation)
+
+    watch(routeTo, (value) => {
+      if (value === Routes.HOME) bgColor.value = THEME_COLORS.light
+      else if (value === Routes.PRESENTATION) bgColor.value = THEME_COLORS.presentation_contrast
+      else if (value === Routes.CONTACTS) bgColor.value = THEME_COLORS.contacts_contrast
+      else if (value === Routes.PROJECTS) bgColor.value = THEME_COLORS.projects_contrast
+    })
+
+    return {
+      bgColor,
+      routeTo,
+      homeTransitionProgress,
+      presentationTransitionProgress,
+      projectsTransitionProgress,
+      contactsTransitionProgress
+    }
+  }
 })
 </script>
 
 <template>
-  <div 
+  <div
     class="transition-page-layer"
     :class="[`route-to-${routeTo}`]"
     :style="{
@@ -218,6 +249,4 @@ export default defineComponent({
     clip-path: polygon(var(--progress-contacts-tlf) var(--progress-contacts-tls), var(--progress-contacts-trf) var(--progress-contacts-trs), var(--progress-contacts-brf) var(--progress-contacts-brs), var(--progress-contacts-blf) var(--progress-contacts-bls));
   }
 }
-
-
 </style>

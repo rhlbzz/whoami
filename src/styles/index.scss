@@ -71,6 +71,26 @@ img {
   font-weight: bold;
 }
 
+.homepage {
+  --bg-color: #2f4858;
+  --accent-color: #f1fbff;
+}
+
+.presentation {
+  --bg-color: #00bbba;
+  --accent-color: #9c4f9c;
+}
+
+.projects {
+  --bg-color: #f0b566;
+  --accent-color: #00864d;
+}
+
+.contacts {
+  --bg-color: #70ebb3;
+  --accent-color: #0082a6;
+}
+
 .intro-safe-area {
   padding: rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 6)) rem(calc($safe-area-y / 2)) rem(calc($safe-area-x / 6));
 
